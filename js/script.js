@@ -35,10 +35,18 @@ function startTimer() {
                 seconds = 0;
             }
 
-            minutesElement.textContent = minutes;
-            secondsElement.textContent = seconds;
-            milisecondsElement.textContent = miliseconds;
+            minutesElement.textContent = formatTime(minutes);
+            secondsElement.textContent = formatTime(seconds);
+            milisecondsElement.textContent = formatMilliseconds(miliseconds);
         }
 
     }, 10);
 };
+
+function formatTime(time) {
+    return time < 10 ? `0${time}` : time;
+};
+
+function formatMilliseconds(time) {
+    return time < 100 ? `${time}`.padStart(3, "0") : time;
+}
