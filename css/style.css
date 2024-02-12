@@ -13,6 +13,7 @@ body {
     height: 100vh;
 }
 
+/* style CONTAINER div: */
 .container {
     display: flex;
     flex-direction: column;
@@ -22,11 +23,13 @@ body {
     padding-top: 3rem;
 }
 
+/* style CONTAINER TITLE div: */
 .container > h1 {
     color: #175cff;
     font-size: 2.7rem;
 }
 
+/* style TIMER div: */
 .container > .timer {
     display: flex;
     font-size: 3.5rem;
@@ -34,20 +37,23 @@ body {
     color: #333;
 }
 
+/* style TIME div: */
 .container > .timer > .time {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     color: #172953;
     margin-right: 10px;
     min-width: 90px;
 }
 
+/* style SEPARATION div: */
 .container > .timer > .separator {
     padding: 0 10px;
     color: #525763;
 }
 
+/* style MILISECONDS div: */
 .container > .timer > .miliseconds {
     font-size: 1.8rem;
     color: #525763;
@@ -73,7 +79,7 @@ body {
     transform: scale(1.1);
 }
 
-/* style button START */
+/* style button START: */
 .container > .buttons > .start-btn {
     background-color: #175cff;
     color: #fff;
@@ -83,4 +89,32 @@ body {
 .container > .buttons > .pause-btn,
 .container > .buttons > .resume-btn {
     display: none;
+}
+
+
+/* responsive screen 500px: */
+@media screen and (max-width: 500px) {
+    .container {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0;
+    }
+
+    .container > h1 {
+        font-size: 2.3rem;
+    }
+
+    .container > .timer {
+        font-size: 3rem;
+    }
+    
+    .container > .timer > .time {
+        justify-content: center;
+        margin-right: 0;
+    }
 }
