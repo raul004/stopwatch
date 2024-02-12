@@ -81,6 +81,6 @@ body {
 
 /* hidden PAUSE and RESUME buttons: */
 .container > .buttons > .pause-btn,
-.container > .buttons > .continue-btn {
+.container > .buttons > .resume-btn {
     display: none;
 }
