@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    gap: 2rem;
+    padding-top: 3rem;
+}
+
+.container > h1 {
+    color: #175cff;
+    font-size: 2.7rem;
+}
+
+.container > .timer {
+    display: flex;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.container > .timer > .time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #172953;
+    margin-right: 10px;
+    min-width: 90px;
+}
+
+.container > .timer > .separator {
+    padding: 0 10px;
+    color: #525763;
+}
+
+.container > .timer > .miliseconds {
+    font-size: 1.8rem;
+    color: #525763;
+}
+
+/* STYLE BUTTONS */
+.container > .buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.container > .buttons > .btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.container > .buttons > .btn:hover {
+    transform: scale(1.1);
+}
+
+/* style button START */
+.container > .buttons > .start-btn {
+    background-color: #175cff;
+    color: #fff;
+}
+
+/* hidden PAUSE and CONTINUE buttons: */
+.container > .buttons > .pause-btn,
+.container > .buttons > .continue-btn {
+    display: none;
+}
