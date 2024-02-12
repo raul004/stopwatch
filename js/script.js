@@ -5,7 +5,7 @@ const milisecondsElement = document.querySelector('[data-miliseconds]');
 const startBtn = document.querySelector('[data-start]');
 const pauseBtn = document.querySelector('.pause-btn');
 const resumeBtn = document.querySelector('.resume-btn');
-const restartBtn = document.querySelector('.restart-btn');
+const resetBtn = document.querySelector('.reset-btn');
 
 let interval;
 
@@ -18,6 +18,7 @@ let isPaused = false;
 startBtn.addEventListener("click", startTimer);
 pauseBtn.addEventListener("click", pauseTimer);
 resumeBtn.addEventListener("click", resumeTimer);
+resetBtn.addEventListener("click", resetTimer);
 
 function startTimer() {
 
@@ -58,6 +59,23 @@ function resumeTimer() {
     isPaused = false;
 
     pauseBtn.style.display = "block";
+    resumeBtn.style.display = "none";
+}
+
+function resetTimer() {
+    clearInterval(interval);
+    isPaused = false;
+
+    minutes = 0;
+    seconds = 0;
+    miliseconds = 0;
+
+    minutesElement.textContent = "00";
+    secondsElement.textContent = "00";
+    milisecondsElement.textContent = "000";
+
+    startBtn.style.display = "block";
+    pauseBtn.style.display = "none";
     resumeBtn.style.display = "none";
 }
 
