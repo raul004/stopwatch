@@ -79,7 +79,7 @@ body {
     color: #fff;
 }
 
-/* hidden PAUSE and CONTINUE buttons: */
+/* hidden PAUSE and RESUME buttons: */
 .container > .buttons > .pause-btn,
 .container > .buttons > .continue-btn {
     display: none;
