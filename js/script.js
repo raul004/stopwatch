@@ -17,6 +17,7 @@ let isPaused = false;
 
 startBtn.addEventListener("click", startTimer);
 pauseBtn.addEventListener("click", pauseTimer);
+resumeBtn.addEventListener("click", resumeTimer);
 
 function startTimer() {
 
@@ -51,6 +52,13 @@ function pauseTimer() {
 
     pauseBtn.style.display = "none";
     resumeBtn.style.display = "block";
+}
+
+function resumeTimer() {
+    isPaused = false;
+
+    pauseBtn.style.display = "block";
+    resumeBtn.style.display = "none";
 }
 
 function formatTime(time) {
